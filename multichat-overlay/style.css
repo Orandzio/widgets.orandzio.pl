@@ -139,8 +139,7 @@ li {
     display: inline-block;     /* Just in case */
 }
 
-.timestamp,
-.pronouns {
+.timestamp {
 	background: #adadad46;
 	/* border-radius: var(--border-radius); */
 	border-radius: 1em;

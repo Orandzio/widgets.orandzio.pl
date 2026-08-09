@@ -33,14 +33,6 @@
 			"group": "Appearance"
 		},
 		{
-			"id": "showPronouns",
-			"label": "Show Pronouns",
-			"description": "",
-			"type": "checkbox",
-			"defaultValue": true,
-			"group": "Appearance"
-		},
-		{
 			"id": "showUsername",
 			"label": "Show Username",
 			"description": "",

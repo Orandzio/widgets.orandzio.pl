@@ -24,7 +24,6 @@ const showPlatform = GetBooleanParam("showPlatform", true);
 const showAvatar = GetBooleanParam("showAvatar", true);
 const showTimestamps = GetBooleanParam("showTimestamps", true);
 const showBadges = GetBooleanParam("showBadges", true);
-const showPronouns = GetBooleanParam("showPronouns", true);
 const showUsername = GetBooleanParam("showUsername", true);
 const showMessage = GetBooleanParam("showMessage", true);
 const font = urlParams.get("font") || "";
@@ -594,7 +593,6 @@ async function TwitchChatMessage(data) {
 	const timestampDiv = instance.querySelector("#timestamp");
 	const platformDiv = instance.querySelector("#platform");
 	const badgeListDiv = instance.querySelector("#badgeList");
-	const pronounsDiv = instance.querySelector("#pronouns");
 	const usernameDiv = instance.querySelector("#username");
 	const messageDiv = instance.querySelector("#message");
 
@@ -662,13 +660,6 @@ async function TwitchChatMessage(data) {
 		else
 			usernameDiv.innerText = `${data.user.name} (${data.user.login})`;
 		usernameDiv.style.color = data.user.color;
-	}
-
-	// Set pronouns
-	const pronouns = await GetPronouns('twitch', data.user.login);
-	if (pronouns && showPronouns) {
-		pronounsDiv.classList.add("pronouns");
-		pronounsDiv.innerText = pronouns;
 	}
 
 	// Set the message data
@@ -943,13 +934,6 @@ async function TwitchAnnouncement(data) {
 		badge.src = data.user.badges[i].imageUrl;
 		badge.classList.add("badge");
 		content.querySelector("#badgeList").appendChild(badge);
-	}
-
-	// Set pronouns
-	const pronouns = await GetPronouns('twitch', data.user.login);
-	if (pronouns) {
-		content.querySelector("#pronouns").classList.add("pronouns");
-		content.querySelector("#pronouns").innerText = pronouns;
 	}
 
 	// Insert the modified template instance into the DOM
@@ -2355,7 +2339,6 @@ async function KickChatMessage(data) {
 	const timestampDiv = instance.querySelector("#timestamp");
 	const platformDiv = instance.querySelector("#platform");
 	const badgeListDiv = instance.querySelector("#badgeList");
-	const pronounsDiv = instance.querySelector("#pronouns");
 	const usernameDiv = instance.querySelector("#username");
 	const messageDiv = instance.querySelector("#message");
 
@@ -2856,7 +2839,6 @@ async function TikTokChat(data) {
 	const timestampDiv = instance.querySelector("#timestamp");
 	const platformDiv = instance.querySelector("#platform");
 	const badgeListDiv = instance.querySelector("#badgeList");
-	const pronounsDiv = instance.querySelector("#pronouns");
 	const usernameDiv = instance.querySelector("#username");
 	const messageDiv = instance.querySelector("#message");
 
