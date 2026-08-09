@@ -192,14 +192,22 @@ li {
 }
 
 #userInfo {
-	display: inline-flex;
+	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+	justify-content: flex-start;
 	gap: 0.25em;
+	width: 100%;
 }
 
 #userInfo > span:empty {
 	display: none;
+}
+
+#userInfo > span,
+#userInfo > img {
+	display: inline-flex;
+	align-items: center;
 }
 
 #username,
