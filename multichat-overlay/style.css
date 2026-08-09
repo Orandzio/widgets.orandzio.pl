@@ -158,7 +158,7 @@ li {
 .platform,
 .badge {
 	height: 1em;
-	margin: 0px;
+	margin: 1px;
 	transform: translate(0px, 0.25em);
 }
 
