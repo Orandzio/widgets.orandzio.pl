@@ -187,7 +187,11 @@ li {
 } */
 
 #badgeList {
-	margin: 0px 5px;
+	margin: 0;
+}
+
+#platform:not(:empty) + #badgeList {
+	margin-left: 5px;
 }
 
 #username,
