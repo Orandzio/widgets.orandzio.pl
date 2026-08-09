@@ -191,6 +191,17 @@ li {
 	margin: 0px 5px;
 }
 
+#userInfo {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.25em;
+}
+
+#userInfo > span:empty {
+	display: none;
+}
+
 #username,
 #title {
 	font-weight: 700;
