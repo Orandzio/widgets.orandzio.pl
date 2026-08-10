@@ -66,6 +66,11 @@ li {
 	transition: all 1s ease-in-out;
 }
 
+#messageList.normalScrollDirection li:last-child,
+#messageList.reverseScrollDirection li:first-child {
+	margin-top: 0;
+}
+
 .reverseLineItemDirection {
 	display: flex;
 	flex-direction: column;
