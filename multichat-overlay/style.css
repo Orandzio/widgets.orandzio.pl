@@ -49,12 +49,12 @@ html {
 }
 
 .normalScrollDirection {
-	margin-bottom: 0px;
+	bottom: 0;
 }
 
 .reverseScrollDirection {
 	display: flex;
-	margin-top: 0px;
+	top: 0;
 	flex-direction: column-reverse;
 }
 
@@ -64,6 +64,11 @@ li {
 	max-height: 0;
 	margin: 5px 0px 0px 0px;
 	transition: all 1s ease-in-out;
+}
+
+#messageList.normalScrollDirection li:last-child,
+#messageList.reverseScrollDirection li:first-child {
+	margin-top: 0;
 }
 
 .reverseLineItemDirection {
