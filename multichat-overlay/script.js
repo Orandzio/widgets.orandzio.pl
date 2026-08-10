@@ -744,14 +744,14 @@ async function TwitchChatMessage(data) {
 		}
 	}
 
-	// Embed image
+	//  Embed image
 	if (IsThisUserAllowedToPostImagesOrNotReturnTrueIfTheyCanReturnFalseIfTheyCannot(imageEmbedPermissionLevel, data, 'twitch') && IsImageUrl(message)) {
 		const image = new Image();
 
 		image.onload = function () {
-			image.style.padding = "0px";
-			image.style.margin = "5px 0 0 0";
-			image.style.borderRadius = "2px";
+			image.style.padding = "0px 0px";
+			image.style.margin = "10px 0 0 0";
+			image.style.borderRadius = "12px";
 			image.style.width = "100%";
 			messageDiv.innerHTML = '';
 			messageDiv.appendChild(image);
@@ -1517,9 +1517,9 @@ async function YouTubeMessage(data) {
 		const image = new Image();
 
 		image.onload = function () {
-			image.style.padding = "0px";
-			image.style.margin = "5px 0 0 0";
-			image.style.borderRadius = "2px";
+			image.style.padding = "0px 0px";
+			image.style.margin = "10px 0 0 0";
+			image.style.borderRadius = "12px";
 			image.style.width = "100%";
 			messageDiv.innerHTML = '';
 			messageDiv.appendChild(image);
@@ -2478,9 +2478,9 @@ async function KickChatMessage(data) {
 		const image = new Image();
 
 		image.onload = function () {
-			image.style.padding = "0px";
-			image.style.margin = "5px 0 0 0";
-			image.style.borderRadius = "2px";
+			image.style.padding = "0px 0px";
+			image.style.margin = "10px 0 0 0";
+			image.style.borderRadius = "12px";
 			image.style.width = "100%";
 			messageDiv.innerHTML = '';
 			messageDiv.appendChild(image);
