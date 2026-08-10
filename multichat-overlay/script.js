@@ -642,7 +642,7 @@ async function TwitchChatMessage(data) {
 		const replyUser = data.reply.userName;
 		const replyMsg = data.reply.msgBody;
 
-		replyDiv.style.display = 'none';
+		replyDiv.style.display = 'block';
 		replyUserDiv.innerText = replyUser;
 		replyMsgDiv.innerText = replyMsg;
 	}
@@ -2370,7 +2370,7 @@ async function KickChatMessage(data) {
 		const replyUser = data.reply.userName;
 		const replyMsg = data.reply.msgBody;
 
-		replyDiv.style.display = 'none';
+		replyDiv.style.display = 'block';
 		replyUserDiv.innerText = replyUser;
 		replyMsgDiv.innerHTML = RenderKickEmotes(replyMsg);
 	}
