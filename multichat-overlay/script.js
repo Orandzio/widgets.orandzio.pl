@@ -751,6 +751,7 @@ async function TwitchChatMessage(data) {
 		image.onload = function () {
 			image.style.padding = "0px 0px";
 			image.style.margin = "10px 0 0 0";
+			image.style.borderRadius = "2px";
 			image.style.width = "100%";
 			messageDiv.innerHTML = '';
 			messageDiv.appendChild(image);
@@ -1516,7 +1517,9 @@ async function YouTubeMessage(data) {
 		const image = new Image();
 
 		image.onload = function () {
-			image.style.padding = "5px 0px";
+			image.style.padding = "0px 0px";
+			image.style.margin = "10px 0 0 0";
+			image.style.borderRadius = "2px";
 			image.style.width = "100%";
 			messageDiv.innerHTML = '';
 			messageDiv.appendChild(image);
@@ -2475,7 +2478,9 @@ async function KickChatMessage(data) {
 		const image = new Image();
 
 		image.onload = function () {
-			image.style.padding = "20px 0px";
+			image.style.padding = "0px 0px";
+			image.style.margin = "10px 0 0 0";
+			image.style.borderRadius = "2px";
 			image.style.width = "100%";
 			messageDiv.innerHTML = '';
 			messageDiv.appendChild(image);
