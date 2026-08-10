@@ -42,7 +42,7 @@ const scrollDirection = GetIntParam("scrollDirection", 1);
 const groupConsecutiveMessages = GetBooleanParam("groupConsecutiveMessages", false);
 const inlineChat = GetBooleanParam("inlineChat", false);
 const highlightMentions = GetBooleanParam("highlightMentions", true);
-const imagePermissionLevel = GetIntParam("imagePermissionLevel", 20);
+const imageEmbedPermissionLevel = GetIntParam("imageEmbedPermissionLevel", 20);
 const showYouTubeLinkPreviews = GetBooleanParam("showYouTubeLinkPreviews", true);
 
 const showTwitchMessages = GetBooleanParam("showTwitchMessages", true);
@@ -744,7 +744,7 @@ async function TwitchChatMessage(data) {
 		}
 	}
 
-	//  image
+	//  Embed image
 	if (IsThisUserAllowedToPostImagesOrNotReturnTrueIfTheyCanReturnFalseIfTheyCannot(imageEmbedPermissionLevel, data, 'twitch') && IsImageUrl(message)) {
 		const image = new Image();
 
