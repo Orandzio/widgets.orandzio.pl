@@ -642,7 +642,7 @@ async function TwitchChatMessage(data) {
 		const replyUser = data.reply.userName;
 		const replyMsg = data.reply.msgBody;
 
-		replyDiv.style.display = 'block';
+		replyDiv.style.display = 'none';
 		replyUserDiv.innerText = replyUser;
 		replyMsgDiv.innerText = replyMsg;
 	}
